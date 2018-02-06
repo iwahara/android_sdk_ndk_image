@@ -55,3 +55,5 @@ RUN apt-get purge maven maven2 \
 RUN wget -q https://dl.google.com/android/repository/android-ndk-r10e-linux-x86_64.zip \
     && unzip -q android-ndk-r10e-linux-x86_64.zip -d /opt \
     && rm android-ndk-r10e-linux-x86_64.zip
+
+CMD ["/bin/bash"]
