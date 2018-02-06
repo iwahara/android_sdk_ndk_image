@@ -8,7 +8,7 @@ RUN apt-get install -y wget unzip build-essential file
 # setup pathes env
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 ENV ANDROID_HOME /opt/android-sdk-linux
-ENV NDK_ROOT /opt/android-ndk-r16b
+ENV NDK_ROOT /opt/android-ndk-r11c
 ENV ANDROID_NDK_HOME ${NDK_ROOT}
 
 # setup Android SDK
@@ -52,8 +52,8 @@ RUN apt-get purge maven maven2 \
     && mvn --version
 
 # setup ndk
-RUN wget -q https://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip \
-    && unzip -q android-ndk-r16b-linux-x86_64.zip -d /opt \
-    && rm android-ndk-r16b-linux-x86_64.zip
+RUN wget -q https://dl.google.com/android/repository/android-ndk-r11c-linux-x86_64.zip \
+    && unzip -q android-ndk-r11c-linux-x86_64.zip -d /opt \
+    && rm android-ndk-r11c-linux-x86_64.zip
 
 CMD ["/bin/bash"]
